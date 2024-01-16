@@ -47,9 +47,9 @@ font-size: 25px;
         #joinNow {
             display: none;
             position: fixed;
-            bottom: 50%; /* Adjust to center vertically */
+            bottom: 20%; /* Adjust to center vertically */
             left: 50%; /* Adjust to center horizontally */
-            transform: translate(-50%, 50%); /* Center the button */
+            /* Center the button */
             background-color: #FFDE59;
             color: #000000;
             padding: 20px; /* Adjust the padding as needed */
@@ -156,7 +156,8 @@ font-size: 25px;
     </style>
 </head>
     <header>
-    <button id="joinNow" onclick="alert('Join Now!')">Join Now</button>
+    <button id="joinNow" onclick="redirectToWebsite()">Join Now</button>
+
         
     <img id="logo" src="./logo.png" alt="Website Logo">
 </header>
@@ -183,6 +184,9 @@ font-size: 25px;
             logo.style.maxWidth = "80px"; /* Adjust the initial width as needed */
             joinNow.style.display = "none";
         }
+        function redirectToWebsite() {
+        window.location.href = "https://pages.razorpay.com/pl_NOr9OguccYRREp/view"; // Replace with the desired website URL
+    }
     }
 </script>
 
