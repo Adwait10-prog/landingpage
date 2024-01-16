@@ -18,6 +18,11 @@
             padding: 0;
             font-family: 'Roboto', sans-serif;
         }
+        .content {
+            padding-top: 60px; /* Adjust to match the logo height */
+        }
+
+        
 
         img {
             max-width: 100%;
@@ -32,10 +37,18 @@ font-size: 25px;
         }
 
         #logo {
-            max-width: 100%;
+            max-width: 80px;
             height: auto;
             display: block;
             margin: 0 auto;
+            
+            
+        }
+        header{
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
 
         h1 {
@@ -50,7 +63,7 @@ font-size: 25px;
         .button-container {
             position: fixed;
             bottom: 0;
-            width: 100%;
+            width: 10%;
             background-color: #FFDE59;
             padding: 10px 0;
             display: none;
@@ -116,10 +129,28 @@ font-size: 25px;
     </style>
 </head>
     <header>
+        
     <img id="logo" src="./logo.png" alt="Website Logo">
 </header>
 
 <body>
+    <script>
+    window.onscroll = function() {
+        scrollFunction();
+    };
+         function scrollFunction() {
+        var logo = document.getElementById("logo");
+
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            // Adjust the size and styles when scrolling
+            logo.style.maxWidth = "50px"; /* Adjust the width as needed */
+            logo.style.transition = "max-width 0.5s ease-in-out";
+        } else {
+            // Reset the size and styles when not scrolling
+            logo.style.maxWidth = "80px"; /* Adjust the initial width as needed */
+        }
+    }
+</script>
 
     <div class="container">
         <h1>From <span style="background-color: #000000; color: #00FFFF; font-weight: bold;"> Language Enthusiast </span> to <span style="background-color: #000000; color: #00FFFF; font-weight: bold;"> Language Pro</span>: Unveil the Future of Global Video Reach!</h1>
